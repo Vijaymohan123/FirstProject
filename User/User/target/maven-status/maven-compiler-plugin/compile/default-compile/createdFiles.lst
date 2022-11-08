@@ -1,0 +1,5 @@
+ProjectKanban\User\model\User.class
+ProjectKanban\User\Controller\UserController.class
+ProjectKanban\User\respository\Userrespository.class
+ProjectKanban\User\UserApplication.class
+ProjectKanban\User\service\Userservice.class
