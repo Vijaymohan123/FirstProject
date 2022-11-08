@@ -7,9 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavibarComponent } from './navibar/navibar.component';
 import { ToDoComponent } from './to-do/to-do.component';
-
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -18,6 +16,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { SharedserviceService } from './sharedservice.service';
+import { FilterPipe } from './filter.pipe';
+import { MatSelectModule } from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog'
+import { PopupComponent } from './popup/popup.component';
+
 
 
 
@@ -26,8 +29,10 @@ import { SharedserviceService } from './sharedservice.service';
     AppComponent,
     LoginComponent,
     RegistrationComponent,
-    NavibarComponent,
-    ToDoComponent
+    ToDoComponent,
+    FilterPipe,
+    PopupComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,11 @@ import { SharedserviceService } from './sharedservice.service';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    DragDropModule
+    DragDropModule,
+    MatSelectModule,
+    MatDialogModule
+    
+    
   ],
   providers: [SharedserviceService],
   bootstrap: [AppComponent]

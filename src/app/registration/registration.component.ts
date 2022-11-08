@@ -27,28 +27,35 @@ export class RegistrationComponent implements OnInit {
   location:['',[Validators.required]],
   skills:['',[Validators.required]],
   technology:['',[Validators.required]],
-  maritalStatus:['',[Validators.required]]
+  martialStatus:['',[Validators.required]],
+  cardStatus:['']
   });
 
   }
 
   ngOnInit(): void {
   }
+
+  //get mapping data
+
   collectRegister()
   {
     this.service.register().subscribe((reg)=>{console.log(reg)});
-    this.router.navigate(["/login"]);
+   // this.router.navigate(["/login"]);
     console.log("Received Response");
   }
+
+  //post mapping data
+
   save()
   {
-    // console.log("hello");
-    //  if(this.registrationObject.invalid){
-    //    return ;
-    //  }
-     console.log(this.registrationObject);
+      if(this.registrationObject.invalid){
+        return ;
+      }
+      let a = {...this.registrationObject.value,cardStatus:"Backlog"};
+      console.log(a, "----> 57");
      this.router.navigate(['/login']);
-     this.service.saveData(this.registrationObject.value).subscribe((data)=>{console.log(data)});
+     this.service.saveData(a).subscribe((a)=>{console.log(a)});
   }
 
 }

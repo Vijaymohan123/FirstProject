@@ -10,9 +10,6 @@ export class LoginComponent implements OnInit {
 
   constructor(private router:Router) { }
  
-   dasId:number=0;
-   emailId:string='';
-   password:string='';
 
   ngOnInit(): void {
   }

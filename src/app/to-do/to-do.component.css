@@ -1,17 +1,26 @@
 .heading-bg{
   background-color: tomato;
+  max-width: 100%;
+  display:flex;
+  justify-content: space-between;
+    
 }
+
 .heading{
   font-size: 25px;
   font-weight: bold;
+ 
+  
 }
 .card-heading{
   background:lightgrey;
   padding:10px;
   border-radius: 5px;
+  display :flex;
+  justify-content: flex-end;
 }
 .example-card {
-  max-width: 400px;
+  max-width: 400px; 
 }
 
 .row-container{
@@ -27,11 +36,14 @@
 .btn-container > button{
   color:#fff;
 }
+
 .tag_1{
   background-color: lightgreen;
+  margin-left: 2px;  
 }
 .tag_2{
   background-color: tomato;
+  margin-right: 2px;
 }
 .example-list {
   width: 1000px;
@@ -41,6 +53,7 @@
   background: white;
   border-radius: 4px;
   overflow: hidden;
+
 }
 
 .example-box {
@@ -92,4 +105,81 @@
   margin:0px 10px;
   border-top:4px solid blue;
   border-radius: 5px;
+}
+.list{
+  background-color: #cbc5c5;
+  color:black;
+  margin-bottom: auto;
+  text-align: center;
+  padding:20px;
+  
+}
+.box1{
+  display:flex;
+
+}
+
+.input-container{
+  position: relative;
+}
+.input-container > div{
+  position:absolute;
+  top:100%;
+  width:100%;
+  background-color: #fff;
+  height:200px;
+  overflow-y: scroll;
+  z-index: 10;
+}
+.input-container > div > span{
+  display: block;
+
+}
+
+.model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  background:rgba(0,0,0,0.1);
+  align-items: center;
+}
+.overlay {
+  width: 500px;
+  min-height: 200px;
+  background-color:blue;
+  color:white;
+  padding:15px;
+}
+.heading-container{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.close-container{
+  display:flex;
+  justify-content: flex-end;
+}
+.close-container > span{
+  cursor: pointer;
+}
+.heading-container > div{
+  border:1px solid black;
+  padding:10px;
+}
+.tech-box{
+  display:inline-block;
+  padding:5px;
+  border:1px solid black;
+}
+.bottom-container > div{
+  margin: 10px 0px;
+}
+.export-container{
+  display: flex;
+  margin-left: 450px;
 }
